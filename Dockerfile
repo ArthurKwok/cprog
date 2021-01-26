@@ -35,5 +35,5 @@ USER cprog-user
 WORKDIR /home/cprog-user
 
 ## Copy src files to user dir
-COPY src/* /home/cprog-user/sources
+COPY src/* /home/cprog-user/sources/
 
