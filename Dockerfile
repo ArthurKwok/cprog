@@ -22,3 +22,16 @@ RUN apt-get install -y libsndfile1 \
 ## other useful libs
 RUN apt-get install -y ffmpeg \
                        libav-tools
+
+## Create and change to new user
+RUN useradd --system \
+            --create-home \
+            --shell /bin/bash \
+            --home-dir /home/cprog-user \
+            --gid root \
+            -G sudo \
+            -u 1001 \
+            cprog-user
+USER cprog-user
+WORKDIR /home/cprog-user
+
