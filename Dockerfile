@@ -20,7 +20,7 @@ RUN apt-get install -y libsndfile1 \
                        libsndfile1-dev
 
 ## other useful libs
-RUN apt-get install -y ffmpeg \
+RUN apt-get install -y ffmpeg
 
 ## Create and change to new user
 RUN useradd --system \
@@ -33,4 +33,7 @@ RUN useradd --system \
             cprog-user
 USER cprog-user
 WORKDIR /home/cprog-user
+
+## Copy src files to user dir
+COPY src/* /home/src
 
