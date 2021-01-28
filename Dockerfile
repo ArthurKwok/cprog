@@ -4,6 +4,8 @@ LABEL maintainer="Arthur Jinyue Guo <jg5505@nyu.edu>"
 
 USER root
 
+ENV DEBIAN_FRONTEND noninteractive
+
 ## basic libs
 RUN apt-get update && apt-get install -y wget \
                                          libasound-dev \
