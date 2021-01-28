@@ -20,7 +20,9 @@ RUN apt-get install -y libsndfile1 \
                        libsndfile1-dev
 
 ## other useful libs
-RUN apt-get install -y ffmpeg
+RUN apt-get install -y ffmpeg \
+                       jackd2 \
+                       libjack-jackd2-dev
 
 ## Create and change to new user
 RUN useradd --system \
