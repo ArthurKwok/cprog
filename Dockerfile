@@ -5,6 +5,7 @@ LABEL maintainer="Arthur Jinyue Guo <jg5505@nyu.edu>"
 USER root
 
 ENV DEBIAN_FRONTEND noninteractive
+ENV DISPLAY=0
 
 ## basic libs
 RUN apt-get update && apt-get install -y wget \
@@ -24,6 +25,7 @@ RUN apt-get install -y libsndfile1 \
 ## other useful libs
 RUN apt-get install -y ffmpeg \
                        jackd2 \
+                       dbus-x11 \
                        libjack-jackd2-dev
 
 ## Create and change to new user
