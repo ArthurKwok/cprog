@@ -23,6 +23,12 @@ RUN apt-get install -y libportaudio2 \
 RUN apt-get install -y libsndfile1 \
                        libsndfile1-dev
 
+## ALSA libs for playback on computer
+RUN apt-get install -y alsa-base \
+                       alsa-utils \
+                       pulseaudio \
+
+
 ## other useful libs
 RUN apt-get install -y ffmpeg \
                        jackd2 \
