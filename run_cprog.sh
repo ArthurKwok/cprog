@@ -4,6 +4,7 @@ sudo docker run -i --gpus all \
 --device /dev/snd:/dev/snd \
 -v /tmp/.X11-unix:/tmp/.X11-unix \
 -v /dev/shm:/dev/shm \
+--security-opt apparmor=unconfined \
 -e DISPLAY=unix$DISPLAY \
 --privileged \
 arthurgjy/cprog:latest

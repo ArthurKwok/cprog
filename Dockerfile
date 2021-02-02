@@ -5,13 +5,14 @@ LABEL maintainer="Arthur Jinyue Guo <jg5505@nyu.edu>"
 USER root
 
 ENV DEBIAN_FRONTEND noninteractive
-ENV DISPLAY=0
+# ENV DISPLAY=0
 
 ## basic libs
 RUN apt-get update && apt-get install -y wget \
                                          libasound-dev \
-                                         libjack-dev
-
+                                         libjack-dev \
+                                         libncurses5-dev \
+                                         libncursesw5-dev
 ## portaudio libs
 RUN apt-get install -y libportaudio2 \
                        libportaudiocpp0 \
